@@ -25,8 +25,8 @@ export const Slider = ({ movies }: { movies: Movie[] }) => {
   }
 
   return (
-    <div className="flex px-4 ">
-      <div className="h-full relative">
+    <div className="flex px-4">
+      <div className="h-full relative mx-auto">
         <div onClick={goToPrevius}>
           <LeftArrow className="w-10 h-10 absolute top-1/2 left-8 z-10 text-white bg-transparent cursor-pointer" />
         </div>
