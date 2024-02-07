@@ -27,13 +27,11 @@ export async function GET() {
     },
   }
 
-  const movies: Movie[] = []
-  fetch(url, options)
-    .then((res) => {
-      res.json()
-      movies.push(res)
+  const movies = await fetch(url, options)
+    .then((res) => res.json())
+    .then((json) => {
+      return json
     })
-    .then((json) => console.log(json))
     .catch((err) => console.error('error:' + err))
 
   return Response.json(movies)
