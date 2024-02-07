@@ -1,5 +1,6 @@
 'use client'
 
+import { HorizCard } from '@/components/cards/HorizCard'
 import { Movie } from '@/types/Movie'
 import { useQuery } from '@tanstack/react-query'
 import axios from 'axios'
@@ -18,7 +19,11 @@ const HomePage = () => {
   return (
     <section className="max-w-6xl mx-auto border-b-8">
       <h1>Header movies</h1>
-      <div>{JSON.stringify(data)}</div>
+      <div>
+        {data?.map((movie) => (
+          <HorizCard key={movie.id} {...movie} />
+        ))}
+      </div>
     </section>
   )
 }
