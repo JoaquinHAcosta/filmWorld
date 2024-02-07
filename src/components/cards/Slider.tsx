@@ -28,10 +28,10 @@ export const Slider = ({ movies }: { movies: Movie[] }) => {
     <div className="flex px-4 ">
       <div className="h-full relative">
         <div onClick={goToPrevius}>
-          <LeftArrow className="w-10 h-10 absolute top-1/2 left-8 z-10 text-red-600 cursor-pointer" />
+          <LeftArrow className="w-10 h-10 absolute top-1/2 left-8 z-10 text-white bg-transparent cursor-pointer" />
         </div>
         <div onClick={goToNext}>
-          <RightArrow className="w-10 h-10 absolute top-1/2 right-8 z-10 text-red-600 cursor-pointer" />
+          <RightArrow className="w-10 h-10 absolute top-1/2 right-8 z-10 text-white bg-transparent cursor-pointer" />
         </div>
         <Image
           className="rounded-md"
@@ -43,11 +43,11 @@ export const Slider = ({ movies }: { movies: Movie[] }) => {
         <div className="flex justify-center">
           {movies.map((movies, movieIndex) => (
             <div
-              className="mx-1 cursor-pointer text-sm"
+              className="mx-1 cursor-pointer text-sm pt-3"
               onClick={() => goToSlide(movieIndex)}
               key={movieIndex}
             >
-              <Square />
+              <Square className="w-6 h-6 text-white" />
             </div>
           ))}
         </div>

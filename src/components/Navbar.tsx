@@ -4,7 +4,7 @@ import { SearchBar } from './SearchBar'
 
 export const Navbar = () => {
   return (
-    <header className="max-w-6xl mx-auto border-b-8">
+    <header className="max-w-6xl mx-auto border-b-8 text-white">
       <nav className=" flex justify-between items-center h-20 bg-transparent border-b-8 ">
         <section className="flex">
           <h1 className="w-[160px] text-center">FilmWorld</h1>
