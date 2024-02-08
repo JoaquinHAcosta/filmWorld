@@ -37,7 +37,7 @@ export const GridMovieGenres = ({ pickedGenre }: { pickedGenre: number }) => {
 
   let viewMovies = data!.slice(start, end)
   return (
-    <div>
+    <nav>
       <div className="h-[84vh] grid grid-cols-4">
         {viewMovies.map((movie) => (
           <MovieCard key={movie.id} {...movie} />
@@ -54,7 +54,11 @@ export const GridMovieGenres = ({ pickedGenre }: { pickedGenre: number }) => {
         <div>
           {Array.from(Array(totalPages)).map((_, i) => {
             return (
-              <button className="mx-2" key={i}>
+              <button
+                className="mx-2"
+                key={i}
+                onClick={() => setCurrentPage(i + 1)}
+              >
                 {i + 1}
               </button>
             )
@@ -68,6 +72,6 @@ export const GridMovieGenres = ({ pickedGenre }: { pickedGenre: number }) => {
           <RightArrow />
         </button>
       </div>
-    </div>
+    </nav>
   )
 }

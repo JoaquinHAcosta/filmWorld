@@ -8,7 +8,7 @@ export const Genres = () => {
   const [pickedGenre, setPickedGenre] = useState(12)
 
   return (
-    <section className="flex w-full min-h-full absolute text-white">
+    <section className="flex w-full min-h-full text-white">
       <div className="w-[1000px] mx-auto flex flex-col ">
         <div className="flex justify-between my-4">
           <h1 className="text-2xl">In Genres</h1>

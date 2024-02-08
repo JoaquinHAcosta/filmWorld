@@ -1,12 +1,13 @@
 export async function GET(req: Request) {
-  const url = new URL(req.url)
+  // const url = new URL(req.url)
+  // console.log(req)
 
-  const genres = url.searchParams.get('with_genres')
+  // const genres = url.searchParams.get('with_genres')
 
   const urlTMDB =
-    genres !== null
-      ? `https://api.themoviedb.org/3/discover/movie?with_genres=${genres}`
-      : 'https://api.themoviedb.org/3/discover/movie'
+    //   genres !== null
+    //     ? `https://api.themoviedb.org/3/discover/movie?with_genres=${genres}` :
+    'https://api.themoviedb.org/3/movie/top_rated?language=en-US&page=1'
 
   const movies = await fetch(urlTMDB, {
     method: 'GET',

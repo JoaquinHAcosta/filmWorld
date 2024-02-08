@@ -4,8 +4,7 @@ export async function GET() {
     method: 'GET',
     headers: {
       accept: 'application/json',
-      Authorization:
-        'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI0N2IwYjI3Yzc3MjUwN2M0ZGM2NDNlZmExYzI3OTk2NSIsInN1YiI6IjY1MjVjMDM3ZDM5OWU2MDBhZGRhMjk5YiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.OdJbK6Gl5U3C3OHvxlgE9nMxKIpQWvlcgfIJsHlKngw',
+      Authorization: `Bearer ${process.env.ACCESS_TOKEN_KEY}`,
     },
   }
 
