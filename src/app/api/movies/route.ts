@@ -2,7 +2,6 @@ export async function GET(req: Request) {
   const url = new URL(req.url)
 
   const genres = url.searchParams.get('with_genres')
-  console.log(genres)
 
   const urlTMDB =
     genres !== null
