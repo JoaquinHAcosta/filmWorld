@@ -5,7 +5,13 @@ import { RightArrow } from '../icons/RightArrow'
 import { LeftArrow } from '../icons/LeftArrow'
 import { Square } from '../icons/Square'
 
-export const Slider = ({ movies }: { movies: Movie[] }) => {
+export const Slider = ({
+  movies,
+  title,
+}: {
+  movies: Movie[]
+  title: string
+}) => {
   const [currentIndex, setCurrentIndex] = useState(0)
 
   function goToPrevius() {
@@ -26,6 +32,7 @@ export const Slider = ({ movies }: { movies: Movie[] }) => {
 
   return (
     <div className="flex px-4">
+      <h1 className="text-white">{title}</h1>
       <div className="h-full relative mx-auto">
         <div onClick={goToPrevius}>
           <LeftArrow className="w-10 h-10 absolute top-1/2 left-8 z-10 text-white bg-transparent cursor-pointer" />

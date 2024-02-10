@@ -33,9 +33,10 @@ export const HomeMain1 = () => {
         src={'/movie-bg.jpg'}
         className="absolute"
       />
+      <h1 className="text-white">Movies</h1>
       <div className="py-10">
-        <div className="min-w-[800px] min-h-[550px]">
-          <Slider movies={data!} />
+        <div className="min-w-[800px] min-h-[550px] text-white">
+          <Slider title={'Popular movies'} movies={data!} />
         </div>
       </div>
     </section>

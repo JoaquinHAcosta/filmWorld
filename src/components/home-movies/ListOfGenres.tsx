@@ -1,6 +1,7 @@
 import { Genre } from '@/types/Genre'
 import { useQuery } from '@tanstack/react-query'
 import axios from 'axios'
+import { Loader } from '../Loader'
 
 export const ListOfGenres = ({ setPickedGenre }: any) => {
   const { data, isLoading, isError } = useQuery({
@@ -11,7 +12,13 @@ export const ListOfGenres = ({ setPickedGenre }: any) => {
       return data.genres as Genre[]
     },
   })
-  if (isLoading) return <div className="text-white">Loading Genres...</div>
+  if (isLoading)
+    return (
+      <section className="text-white mx-auto min-h-[100px] flex justify-center items-center">
+        <Loader />
+        <p className="mx-3">Loading Genres...</p>
+      </section>
+    )
   if (isError)
     return <div className="text-white">Something went wrong, try again</div>
   return (
