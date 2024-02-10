@@ -5,6 +5,7 @@ import { MovieCard } from '../cards/MovieCard'
 import { useState } from 'react'
 import { LeftArrow } from '../icons/LeftArrow'
 import { RightArrow } from '../icons/RightArrow'
+import { Loader } from '../Loader'
 
 export const GridMovieGenres = ({ pickedGenre }: { pickedGenre: number }) => {
   const [currentPage, setCurrentPage] = useState(1)
@@ -25,9 +26,17 @@ export const GridMovieGenres = ({ pickedGenre }: { pickedGenre: number }) => {
     setCurrentPage(currentPage + 1)
   }
 
-  if (isLoading) return <div className="text-white">Loading Movies...</div>
+  if (isLoading)
+    return (
+      <section className="text-white mx-auto h-[84vh] flex justify-center items-center">
+        <Loader />
+        <p className="mx-3">Loading Movies...</p>
+      </section>
+    )
   if (isError)
-    return <div className="text-white">Something went wrong, try again</div>
+    return (
+      <section className="text-white">Something went wrong, try again</section>
+    )
 
   const N_OF_CARDS = 8
 
@@ -38,7 +47,7 @@ export const GridMovieGenres = ({ pickedGenre }: { pickedGenre: number }) => {
   let viewMovies = data!.slice(start, end)
   return (
     <nav>
-      <div className="h-[84vh] grid grid-cols-4">
+      <div className="min-h-[84vh] grid grid-cols-4">
         {viewMovies.map((movie) => (
           <MovieCard key={movie.id} {...movie} />
         ))}

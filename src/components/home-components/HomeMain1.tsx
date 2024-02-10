@@ -6,6 +6,7 @@ import { Slider } from '../cards/Slider'
 import { Movie } from '@/types/Movie'
 import { useQuery } from '@tanstack/react-query'
 import axios from 'axios'
+import { Loader } from '../Loader'
 
 export const HomeMain1 = () => {
   const { data, isLoading, isError } = useQuery({
@@ -15,7 +16,13 @@ export const HomeMain1 = () => {
       return data.results as Movie[]
     },
   })
-  if (isLoading) return <div>Loading Movies...</div>
+  if (isLoading)
+    return (
+      <section className="text-white mx-auto min-h-[700px] flex justify-center items-center">
+        <Loader />
+        <p className="mx-3">Loading Movies...</p>
+      </section>
+    )
   if (isError) return <div>Something went wrong, try again</div>
   return (
     <section>
