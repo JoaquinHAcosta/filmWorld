@@ -1,3 +1,4 @@
+import { NewsSection } from '@/components/NewsSection'
 import { Genres } from '@/components/home-movies/Genres'
 import { HomeMain1 } from '@/components/home-movies/HomeMain1'
 import { TopRated } from '@/components/home-movies/TopRated'
@@ -11,6 +12,7 @@ const HomePage = () => {
         <Genres />
         <TopRated />
         <HomeSeries />
+        <NewsSection />
       </div>
     </main>
   )
