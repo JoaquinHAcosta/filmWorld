@@ -6,7 +6,7 @@ import { HomeSeries } from '@/components/home-series/HomeSeries'
 
 const HomePage = () => {
   return (
-    <main className="flex flex-col justify-center items-center min-w-[800px] ">
+    <main className="flex flex-col justify-center items-center min-w-[800px] dark:bg-[#070218]">
       <HomeMain1 />
       <Genres />
       <TopRated />

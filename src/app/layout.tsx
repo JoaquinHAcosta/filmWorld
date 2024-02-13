@@ -4,6 +4,7 @@ import './globals.css'
 import { Header } from '@/components/Header/Header'
 import TanstackProvider from '@/providers/TanstackProvider'
 import { Footer } from '@/components/Footer'
+import { ThemeProvider } from '@/components/theme-provider'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -19,11 +20,18 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.className} bg-zinc-950 dark:bg-white`}>
+      <body className={inter.className}>
         <TanstackProvider>
-          <Header />
-          {children}
-          <Footer />
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="system"
+            enableSystem
+            disableTransitionOnChange
+          >
+            <Header />
+            {children}
+            <Footer />
+          </ThemeProvider>
         </TanstackProvider>
       </body>
     </html>

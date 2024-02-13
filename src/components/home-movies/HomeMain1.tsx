@@ -23,10 +23,15 @@ export const HomeMain1 = () => {
         <p className="mx-3">Loading Movies...</p>
       </section>
     )
-  if (isError) return <div>Something went wrong, try again</div>
+  if (isError)
+    return (
+      <section className="text-white mx-auto min-h-[700px] flex justify-center items-center">
+        <p className="mx-3">Something went wrong :(</p>
+      </section>
+    )
   return (
-    <section>
-      <div className="min-h-[550px] text-white py-10">
+    <section className="w-full h-5/6 bg-[url('/movie-bg.jpg')]">
+      <div className="text-white py-10">
         <Slider title={'Popular movies'} movies={data!} />
       </div>
     </section>
