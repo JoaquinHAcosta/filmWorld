@@ -26,18 +26,8 @@ export const HomeMain1 = () => {
   if (isError) return <div>Something went wrong, try again</div>
   return (
     <section>
-      <Image
-        alt="background"
-        width={2000}
-        height={2000}
-        src={'/movie-bg.jpg'}
-        className="absolute"
-      />
-      <h1 className="text-white">Movies</h1>
-      <div className="py-10">
-        <div className="min-w-[800px] min-h-[550px] text-white">
-          <Slider title={'Popular movies'} movies={data!} />
-        </div>
+      <div className="min-h-[550px] text-white py-10">
+        <Slider title={'Popular movies'} movies={data!} />
       </div>
     </section>
   )

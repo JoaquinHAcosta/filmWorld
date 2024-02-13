@@ -6,14 +6,12 @@ import { HomeSeries } from '@/components/home-series/HomeSeries'
 
 const HomePage = () => {
   return (
-    <main>
+    <main className="flex flex-col justify-center items-center min-w-[800px] ">
       <HomeMain1 />
-      <div className="absolute w-full">
-        <Genres />
-        <TopRated />
-        <HomeSeries />
-        <NewsSection />
-      </div>
+      <Genres />
+      <TopRated />
+      <HomeSeries />
+      <NewsSection />
     </main>
   )
 }
