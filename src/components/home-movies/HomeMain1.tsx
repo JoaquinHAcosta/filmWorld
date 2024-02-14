@@ -36,7 +36,7 @@ export const HomeMain1 = () => {
           Popular films this week:
         </h1>
         {/* <Slider title={'Popular movies'} movies={data!} /> */}
-        <div className="max-w-[1024px] max-h-[600px]">
+        <div className="max-w-[1024px] mx-4">
           <CarrouselSCN movies={data!} />
         </div>
       </div>
