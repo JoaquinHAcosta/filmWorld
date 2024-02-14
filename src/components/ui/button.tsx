@@ -21,7 +21,7 @@ const buttonVariants = cva(
           'hover:bg-slate-100 hover:text-slate-900 dark:hover:bg-slate-800 dark:hover:text-slate-50',
         link: 'text-slate-900 underline-offset-4 hover:underline dark:text-slate-50',
         nav: 'text-black dark:text-white hover:text-red-700',
-        redButton: 'text-white bg-red-700 rounded-full',
+        redButton: 'text-white bg-red-700 rounded-xl m-1 px-2',
       },
       size: {
         default: 'h-10 px-4 py-2',

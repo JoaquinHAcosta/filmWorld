@@ -31,9 +31,9 @@ export const Slider = ({
   }
 
   return (
-    <div className="flex px-4">
+    <div className="flex p-4">
       {/* <h1 className="text-white">{title}</h1> */}
-      <div className="h-full relative mx-auto">
+      <div className="h-[500px] relative mx-auto mb-10">
         <div onClick={goToPrevius}>
           <LeftArrow className="w-10 h-10 absolute top-1/2 left-8 z-10 text-white bg-transparent cursor-pointer" />
         </div>
@@ -41,9 +41,9 @@ export const Slider = ({
           <RightArrow className="w-10 h-10 absolute top-1/2 right-8 z-10 text-white bg-transparent cursor-pointer" />
         </div>
         <Image
-          className="rounded-md"
+          className="rounded-md border-2 border-black shadow-lg"
           width={900}
-          height={600}
+          height={500}
           alt="movie"
           src={`https://image.tmdb.org/t/p/w500${movies[currentIndex].backdrop_path}`}
         />

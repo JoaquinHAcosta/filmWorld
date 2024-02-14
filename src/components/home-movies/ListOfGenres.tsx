@@ -2,6 +2,7 @@ import { Genre } from '@/types/Genre'
 import { useQuery } from '@tanstack/react-query'
 import axios from 'axios'
 import { Loader } from '../Loader'
+import { Button } from '../ui/button'
 
 export const ListOfGenres = ({ setPickedGenre }: any) => {
   const { data, isLoading, isError } = useQuery({
@@ -24,13 +25,14 @@ export const ListOfGenres = ({ setPickedGenre }: any) => {
   return (
     <div className="flex flex-wrap justify-evenly mb-6">
       {data?.map((genre) => (
-        <button
+        <Button
+          variant={'redButton'}
           onClick={() => setPickedGenre(genre.id)}
           key={genre.id}
-          className="text-white bg-red-600 rounded-3xl m-1 px-2"
+          className="text-white px-6"
         >
           {genre.name}
-        </button>
+        </Button>
       ))}
     </div>
   )
