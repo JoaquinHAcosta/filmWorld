@@ -5,6 +5,7 @@ import { useQuery } from '@tanstack/react-query'
 import axios from 'axios'
 import React from 'react'
 import { BackdropCard } from '../cards/BackdropCard'
+import { CarouselTopRated } from '../cards/CarouselTopRated'
 
 export const GridTopRated = () => {
   const { data, isLoading, isError } = useQuery({
@@ -17,11 +18,5 @@ export const GridTopRated = () => {
   if (isLoading) return <div className="text-white">Loading Movies...</div>
   if (isError)
     return <div className="text-white">Something went wrong, try again</div>
-  return (
-    <div className="flex h-64 overflow-x-auto">
-      {data!.map((movie) => (
-        <BackdropCard key={movie.id} {...movie} />
-      ))}
-    </div>
-  )
+  return <CarouselTopRated movies={data!} />
 }

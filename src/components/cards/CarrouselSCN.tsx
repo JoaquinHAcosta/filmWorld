@@ -5,19 +5,26 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from '@/components/ui/carousel'
+import Autoplay from 'embla-carousel-autoplay'
 import { Movie } from '@/types/Movie'
 import { Card, CardContent } from '../ui/card'
 import Image from 'next/image'
 
 export const CarrouselSCN = ({ movies }: { movies: Movie[] }) => {
   return (
-    <Carousel>
+    <Carousel
+      plugins={[
+        Autoplay({
+          delay: 5000,
+        }),
+      ]}
+    >
       <CarouselContent>
         {movies.map((movie) => (
           <CarouselItem key={movie.id}>
             <div className="p-1">
               <Card>
-                <CardContent className="flex items-center justify-center rounded-md relative pt-6 h-[550px]">
+                <CardContent className="flex items-center justify-center rounded-md relative pt-6 h-[550px] overflow-hidden">
                   <Image
                     width={1024}
                     height={550}
