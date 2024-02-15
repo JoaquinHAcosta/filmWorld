@@ -33,7 +33,7 @@ export function CarouselTopRated({ movies }: { movies: Movie[] }) {
                     src={`https://image.tmdb.org/t/p/w500${movie.backdrop_path}`}
                   />
                   <h3 className="absolute text-lg bottom-1 left-2 p-6">
-                    {movie.title}({movie.release_date.split('-')[0]})
+                    {movie.title}({movie.release_date.toString().split('-')[0]})
                   </h3>
                 </CardContent>
               </Card>
