@@ -13,7 +13,7 @@ export const Header = () => {
             <Link href="/home">Home</Link>
           </Button>
           <Button variant={'nav'}>
-            <Link href="#">Movies</Link>
+            <Link href="/movies">Movies</Link>
           </Button>
           <Button variant={'nav'}>
             <Link href="#">Series</Link>
