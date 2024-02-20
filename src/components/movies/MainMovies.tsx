@@ -1,4 +1,5 @@
 'use client'
+
 import { CarouselMovie } from './CarouselMovie'
 import { Loader } from '../Loader'
 import { useQuery } from '@tanstack/react-query'
