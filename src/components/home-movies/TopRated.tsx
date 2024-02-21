@@ -1,4 +1,3 @@
-import React from 'react'
 import { GridTopRated } from './GridTopRated'
 
 export const TopRated = () => {

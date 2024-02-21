@@ -1,6 +1,5 @@
 import { Movie } from '@/types/Movie'
 import Image from 'next/image'
-import React from 'react'
 
 export const MovieCard = (movie: Movie) => {
   return (

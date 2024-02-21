@@ -1,6 +1,6 @@
 import { Movie } from '@/types/Movie'
 import Image from 'next/image'
-import React, { useState } from 'react'
+import { useState } from 'react'
 import { RightArrow } from '../icons/RightArrow'
 import { LeftArrow } from '../icons/LeftArrow'
 import { Square } from '../icons/Square'

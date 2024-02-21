@@ -3,8 +3,6 @@
 import { Movie } from '@/types/Movie'
 import { useQuery } from '@tanstack/react-query'
 import axios from 'axios'
-import React from 'react'
-import { BackdropCard } from '../cards/BackdropCard'
 import { CarouselTopRated } from '../cards/CarouselTopRated'
 
 export const GridTopRated = () => {

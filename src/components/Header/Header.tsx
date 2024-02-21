@@ -1,5 +1,4 @@
 import Link from 'next/link'
-import { SearchBar } from '../SearchBar'
 import { Button } from '../ui/button'
 import { ModeToggle } from '../ToggleTheme'
 

@@ -1,6 +1,5 @@
 import { Movie } from '@/types/Movie'
 import Image from 'next/image'
-import { useState } from 'react'
 
 export const BackdropCard = (movie: Movie) => {
   return (

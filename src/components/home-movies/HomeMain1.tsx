@@ -1,7 +1,5 @@
 'use client'
 
-import React from 'react'
-import { Slider } from '../cards/Slider'
 import { Movie } from '@/types/Movie'
 import { useQuery } from '@tanstack/react-query'
 import axios from 'axios'

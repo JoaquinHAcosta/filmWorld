@@ -1,9 +1,6 @@
 'use client'
 
-import Image from 'next/image'
-import React, { useState } from 'react'
-import { Slider } from '../cards/Slider'
-import { Movie } from '@/types/Movie'
+import { useState } from 'react'
 import { useQuery } from '@tanstack/react-query'
 import axios from 'axios'
 import { Loader } from '../Loader'
