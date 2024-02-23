@@ -3,7 +3,7 @@ import MainMovies from '@/components/movies/MainMovies'
 
 const Movies = () => {
   return (
-    <div>
+    <div className="bg-[#070218]">
       <MainMovies />
       <GridTopMovies />
     </div>
